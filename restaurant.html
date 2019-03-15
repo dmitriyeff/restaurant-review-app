@@ -7,6 +7,9 @@
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Info</title>
 </head>
 
@@ -30,7 +33,15 @@
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map">
+        <script>
+          mapboxgl.accessToken = 'pk.eyJ1IjoiY2l0cnlzIiwiYSI6ImNqdGE2NjlrNjA3b3c0M3FkdjJwdGJpeGIifQ.oG0O_92DbxA7XjSihhe8Xw';
+          var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+          });
+        </script>
+      </div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
