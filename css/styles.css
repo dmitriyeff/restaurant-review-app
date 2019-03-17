@@ -96,7 +96,6 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
-  width: 100%;
   background-color: #ccc; }
 
 /* ====================== Restaurant Filtering ====================== */
@@ -195,6 +194,14 @@ nav h1 a {
   width: 100%;
   z-index: 1000; }
 
+.inside .map-cont {
+  background: blue none repeat scroll 0 0;
+  height: 87%;
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 50%; }
+
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 87%;
@@ -283,7 +290,7 @@ nav h1 a {
 /*============== Media queries ============*/
 /* Portrait and Landscape on mobile devices*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  #maincontent {
+  .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -304,7 +311,7 @@ nav h1 a {
   #restaurant-cuisine, #restaurant-img,
   .inside #footer {
     width: 100%; }
-  .inside #map-container {
+  .inside .map-cont {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -314,68 +321,9 @@ nav h1 a {
     height: 400px;
     position: relative;
     margin: 10px; }
-  #reviews-container {
-    border-top: 0;
-    padding: 30px 20px 80px;
-    width: 85%;
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    margin: 10px; }
-  .inside #map {
+  .inside .rev-map {
     height: 400px;
-    width: 100%;
-    z-index: auto; }
-  #review-list {
-    width: 100%;
-    height: auto; }
-  nav {
-    height: auto;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1; }
-  #restaurant-name {
-    margin-top: 125px; }
-  #footer {
-    -webkit-box-ordinal-group: 10000;
-        -ms-flex-order: 9999;
-            order: 9999; }
-  .inside header {
-    z-index: 9999; } }
-
-/* Desktop */
-@media screen and (max-width: 890px) {
-  #maincontent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  #breadcrumb {
-    width: 100%;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0; }
-  #restaurant-container {
-    width: 85%;
-    padding: 0;
-    margin: auto;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
-  #restaurant-cuisine, #restaurant-img,
-  .inside #footer {
     width: 100%; }
-  .inside #map-container {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 400px;
-    position: relative;
-    margin: 10px; }
   #reviews-container {
     border-top: 0;
     padding: 30px 20px 80px;
@@ -385,15 +333,72 @@ nav h1 a {
             order: 3;
     margin: 10px;
     border-bottom: none; }
-  .inside #map {
-    height: 400px;
-    width: 100%;
-    z-index: auto; }
   #review-list {
     width: 100%;
     height: auto; }
   nav {
-    height: auto;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
+  #restaurant-name {
+    margin-top: 125px; }
+  .inside #footer {
+    -webkit-box-ordinal-group: 10000;
+        -ms-flex-order: 9999;
+            order: 9999;
+    position: unset; }
+  .inside header {
+    z-index: 9999; } }
+
+/* Desktop */
+@media screen and (max-width: 890px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  #breadcrumb {
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
+  #restaurant-container {
+    width: 85%;
+    padding: 0;
+    margin: auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  #restaurant-cuisine, #restaurant-img,
+  .inside #footer {
+    width: 100%; }
+  .inside .map-cont {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin: 10px; }
+  .inside .rev-map {
+    height: 400px;
+    width: 100%; }
+  #reviews-container {
+    border-top: 0;
+    padding: 30px 20px 80px;
+    width: 85%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin: 10px;
+    border-bottom: none; }
+  #review-list {
+    width: 100%;
+    height: auto; }
+  nav {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1; }
