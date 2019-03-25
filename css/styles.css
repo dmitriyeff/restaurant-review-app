@@ -287,8 +287,20 @@ nav h1 a {
 #restaurant-hours td {
   color: #666; }
 
+/*============== Skip link ============*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #BF1722;
+  color: white;
+  padding: 6px;
+  z-index: 100; }
+
+.skip-link:focus {
+  top: 0; }
+
 /*============== Media queries ============*/
-/* Portrait and Landscape on mobile devices*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .main {
     display: -webkit-box;
@@ -317,10 +329,10 @@ nav h1 a {
             order: 2;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 85%;
     height: 400px;
     position: relative;
-    margin: 10px; }
+    margin: auto; }
   .inside .rev-map {
     height: 400px;
     width: 100%; }
@@ -331,7 +343,7 @@ nav h1 a {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    margin: 10px;
+    margin: auto;
     border-bottom: none; }
   #review-list {
     width: 100%;
@@ -379,10 +391,10 @@ nav h1 a {
             order: 2;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 85%;
     height: 400px;
     position: relative;
-    margin: 10px; }
+    margin: auto; }
   .inside .rev-map {
     height: 400px;
     width: 100%; }
@@ -393,7 +405,7 @@ nav h1 a {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    margin: 10px;
+    margin: auto;
     border-bottom: none; }
   #review-list {
     width: 100%;
@@ -403,7 +415,7 @@ nav h1 a {
         -ms-flex-order: -1;
             order: -1; }
   #restaurant-name {
-    margin-top: 125px; }
+    margin-top: 150px; }
   .inside #footer {
     -webkit-box-ordinal-group: 10000;
         -ms-flex-order: 9999;
@@ -411,3 +423,9 @@ nav h1 a {
     position: unset; }
   .inside header {
     z-index: 9999; } }
+
+/* image min height size */
+@media screen and (max-width: 435px) {
+  #restaurants-list .restaurant-img {
+    min-height: 0;
+    margin-top: 5px; } }
