@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Normalize.css for better cross-browser consistency -->
@@ -16,17 +16,16 @@
 <body class="inside">
   <!-- Beginning header -->
   <header>
-  <!--  <a href="#tomaincontent" class="skip-link">Skip to main content</a> -->
     <!-- Beginning nav -->
-    <nav>
-      <h1><a role="link" href="/">Restaurant Reviews</a></h1>
+    <nav role="navigation" aria-label="Breadcrumb">
+        <h1><a role="link" href="/">Restaurant Reviews</a></h1>
+      <!-- Beginning breadcrumb -->
+      <ul id="breadcrumb" >
+        <li><a role="link" href="/">Home</a></li>
+      </ul>
+      <!-- End breadcrumb -->
+      <!-- End nav -->
     </nav>
-    <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a role="link" href="/">Home</a></li>
-    </ul>
-    <!-- End breadcrumb -->
-    <!-- End nav -->
     <a href="#skipfooter" class="skip-link">Skip to the footer</a>
   </header>
   <!-- End header -->
@@ -35,7 +34,7 @@
   <main id="maincontent" class="main">
     <!-- Beginning map -->
     <section id="map-conainer" class="map-cont">
-      <div id="map" class="rev-map">
+      <div id="map" class="rev-map" role="application">
         <script>
           mapboxgl.accessToken = 'pk.eyJ1IjoiY2l0cnlzIiwiYSI6ImNqdGE2NjlrNjA3b3c0M3FkdjJwdGJpeGIifQ.oG0O_92DbxA7XjSihhe8Xw';
           var map = new mapboxgl.Map({
@@ -48,7 +47,7 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
+      <h2 id="restaurant-name"></h2>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>

@@ -7,7 +7,7 @@ var markers = []
 /* Service worker registration */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('js/sw.js').then(function() {
+    navigator.serviceWorker.register('/sw.js').then(function() {
       console.log('Registration worked');
     }).catch(function() {
       console.log('Registration failed');
@@ -176,7 +176,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(image);
   image.alt = `${restaurant.name} restaurant image`; // add alt tag name to each image
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');  // The restaurant name should use lower semantic such as h2 or h3 tag.
   name.innerHTML = restaurant.name;
   li.append(name);
 
