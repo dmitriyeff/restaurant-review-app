@@ -4,6 +4,11 @@ let restaurants,
 var newMap
 var markers = []
 
+// add tabindex
+document.querySelector('.skip-link').tabindex = "0";
+document.querySelector('.filter-options').tabindex = "1";
+
+
 /* Service worker registration */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
